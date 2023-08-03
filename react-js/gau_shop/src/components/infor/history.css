@@ -1,0 +1,124 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 auto;
+    width: 700px;
+}
+
+@media screen and (max-width: 668px) {
+    .side-bar {
+        display: none;
+    }
+
+    i.menu {
+        display: block !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    /* Table full chiều rộng màn hình, cách đều trái phải 10px */
+    table {
+        margin: 0 10px;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    table th,
+    table td {
+        display: block;
+        border-bottom: none;
+    }
+
+    table tr:last-child td {
+        border-bottom: 1px solid #663399;
+    }
+}
+
+.log-out {
+    color: #663399;
+    margin: 0 auto;
+    background: #faaee5;
+}
+
+.log-out:hover {
+    color: black;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #faaee5;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+/* The sidebar links */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #663399;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: #663399;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #faaee5;
+    color: #663399;
+    padding: 10px 15px;
+    border: none;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.openbtn:hover {
+    background-color: #087990;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left 0.5s; /* If you want a transition effect */
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
